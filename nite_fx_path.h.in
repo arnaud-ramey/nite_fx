@@ -1,0 +1,11 @@
+/*!
+* \file nite_fx_path.h.in
+* A CMake generated file for compiling otions
+* \date 11/2014
+* \author Arnaud Ramey
+*/
+#ifndef NITE_FX_PATH_H
+
+#define NITE_FX_PATH       "@PROJECT_SOURCE_DIR@/"
+
+#endif /* NITE_FX_PATH_H */

@@ -1,0 +1,29 @@
+________________________________________________________________________________
+
+Dependencies
+________________________________________________________________________________
+You need the following libraries before compiling :
+* cmake  ( sudo apt-get install cmake ),
+* OpenCV ( sudo apt-get install libopencv-dev )
+  For Windows, go to
+  http://opencv.org/downloads.html
+* OpenNI, NITE
+  For Linux, detailed instructions are available in
+  https://sites.google.com/site/rameyarnaud/misc/c/openni-and-nite-1-5-installation
+  For Windows, follow
+  www.openni.org/openni-sdk/openni-sdk-history-2/
+
+________________________________________________________________________________
+
+How to build the program
+________________________________________________________________________________
+The project is based on a CMakeLists.
+It is easy to build the program on a Unix computer.
+Go in the source folder and type:
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+
+For Windows users, some instructions are available on OpenCV website:
+http://opencv.willowgarage.com/wiki/Getting_started .
