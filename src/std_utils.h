@@ -29,11 +29,12 @@ Some useful functions shared for the project kinect
 
 // std
 #include <fstream>
+#include <map>
 // boost
 #include <boost/filesystem/path.hpp>
 #include <boost/filesystem/operations.hpp>
 // ROS
-#include <std_msgs/ColorRGBA.h>
+//#include <std_msgs/ColorRGBA.h>
 
 namespace std_utils {
 
@@ -248,14 +249,14 @@ inline void save_file(const std::string & filepath, const std::string & content)
 ////////////////////////////////////////////////////////////////////////////////
 // string_utils_ros
 
-template<class _T>
-std::string ros_object_to_string(const _T & object) {
-  uint32_t serial_size = ros::serialization::serializationLength(object);
-  uint8_t buffer_uint[serial_size];
-  ros::serialization::OStream stream_out(buffer_uint, serial_size);
-  ros::serialization::Serializer<_T>::write(stream_out, object);
-  return std::string((char*) buffer_uint, serial_size);
-} // end ros_object_to_string()
+//template<class _T>
+//std::string ros_object_to_string(const _T & object) {
+//  uint32_t serial_size = ros::serialization::serializationLength(object);
+//  uint8_t buffer_uint[serial_size];
+//  ros::serialization::OStream stream_out(buffer_uint, serial_size);
+//  ros::serialization::Serializer<_T>::write(stream_out, object);
+//  return std::string((char*) buffer_uint, serial_size);
+//} // end ros_object_to_string()
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -267,13 +268,13 @@ void ros_object_to_file(const std::string & filename,
 
 ////////////////////////////////////////////////////////////////////////////////
 
-template<class _T>
-void ros_object_from_string(const std::string & object_str,
-                            _T & my_value) {
-  uint32_t serial_size2 = object_str.size();
-  ros::serialization::IStream stream_in((unsigned char*) object_str.data(), serial_size2);
-  ros::serialization::Serializer<_T>::read(stream_in, my_value);
-}
+//template<class _T>
+//void ros_object_from_string(const std::string & object_str,
+//                            _T & my_value) {
+//  uint32_t serial_size2 = object_str.size();
+//  ros::serialization::IStream stream_in((unsigned char*) object_str.data(), serial_size2);
+//  ros::serialization::Serializer<_T>::read(stream_in, my_value);
+//}
 
 ////////////////////////////////////////////////////////////////////////////////
 

@@ -29,7 +29,7 @@ ________________________________________________________________________________
 
 #include "effect_interface.h"
 
-#include <ros/ros.h>
+//#include <ros/ros.h>
 #include <opencv2/imgproc/imgproc.hpp>
 #include "geometry_utils.h"
 #include "drawing_utils.h"
