@@ -2,6 +2,8 @@
                   |      nite_fx         |
                   +----------------------+
 
+[![Build Status](https://travis-ci.org/arnaud-ramey/nite_fx.svg)](https://travis-ci.org/arnaud-ramey/nite_fx)
+
 Generate visual FX for the Kinect.
 It makes use of the data supplied by the Kinect: RGB, depth, user map, and skeleton calibration.
 
