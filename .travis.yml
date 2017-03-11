@@ -1,5 +1,7 @@
 # travis rules for project
 language: cpp
+# libopenni-dev is available only since Trusty (14.04)
+dist: trusty
 compiler:
   - gcc
 
