@@ -1,13 +1,18 @@
 # travis rules for project
 language: cpp
 # libopenni-dev is available only since Trusty (14.04)
+sudo: required
 dist: trusty
 compiler:
   - gcc
 
 before_install:
-  # install deps
+  # install deps from Ubuntu repos
   - sudo apt-get install -y  libopencv-dev  libopenni-dev  libgtest-dev  libboost-dev  libboost-filesystem-dev
+  # install NiTE from a Github cached version
+  - git clone https://github.com/arnaud-ramey/NITE-Bin-Dev-Linux-v1.5.2.23 NITE
+  - cd NITE/x64
+  - sudo bash install.sh
 
 script: # compile
   - mkdir build
