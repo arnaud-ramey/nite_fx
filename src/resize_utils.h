@@ -158,7 +158,8 @@ void scale_img_forward_backward(const cv::Mat_<_T> & in, cv::Mat_<_T> & out,
     //           geometry_utils::print_rect(r1).c_str(),
     //           geometry_utils::print_rect(r1_inter_in).c_str(),
     //           geometry_utils::print_rect(r1_inter_out).c_str());
-    in(r1_inter_in).copyTo(out(r1_inter_out));
+    cv::Mat_<_T> out_roi = out(r1_inter_out);
+    in(r1_inter_in).copyTo(out_roi);
     return;
   }
 
